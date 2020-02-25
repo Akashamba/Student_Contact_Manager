@@ -18,8 +18,8 @@ def clean(list):
 db = sqlite3.connect('contacts_db')
 c = db.cursor()
 c.execute('''CREATE TABLE IF NOT EXISTS Accounts(Name TEXT, Username TEXT PRIMARY KEY,Password TEXT)''')
-c.execute('''CREATE TABLE IF NOT EXISTS Student(Name TEXT PRIMARY KEY, Address TEXT, Contact Number INTEGER, 
-                                    Email ID TEXT, Parent Contact Number INTEGER, Register Number INTEGER)''')
+c.execute('''CREATE TABLE IF NOT EXISTS Student(Name TEXT, Register_Number INTEGER PRIMARY KEY, Address TEXT, Contact_Number INTEGER, 
+                                    Email_ID TEXT, Parent_Contact_Number INTEGER)''')
 db.commit()
 
 
@@ -48,3 +48,16 @@ def authenticate(username, password):
             return True
     except:
         return False
+
+
+def search(reg):
+    details = []
+    columns = ["Name:", "Register Number:", "Address:", "Contact Number:", "Email Id:", "Parent's Contact Number:"]
+    c.execute('''select * from Student where Register_Number=?''', (reg,))
+    x = c.fetchall()
+    for i in range(len(x[0])):
+            details.append(str(columns[i]) +" "+ str(x[0][i]))
+    return details
+
+
+# search(311018104001)
