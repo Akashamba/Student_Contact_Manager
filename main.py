@@ -5,7 +5,7 @@ from Sign_Up import signup
 col = "#343434"
 
 layout = [
-    [s.Text("Student Contact Manager", font='courier' '50', background_color=col, justification="left")],
+    [s.Text("Student Contact Manager", background_color=col, justification="left")],
     [s.Text("", background_color=col)],
     [s.Button("Log In", button_color=('white', 'black')), s.Button("Sign Up", button_color=('white', 'black'))]
 ]
