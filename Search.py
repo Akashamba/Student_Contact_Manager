@@ -1,16 +1,10 @@
-import PySimpleGUI as s
-from back import search
-import Log_In
-
-col = "#343434"
-student = []
-
-
-def search_page():
+    student = []
+    col = "#343434"
+    col2 = "white"
     layout = [
-        [s.Text("Student Contact Manager", font='courier' '50', background_color=col, justification="left"), s.Button("Log Out", button_color=("green", col), border_width=0)],
-        [s.Text("Enter Register Number", background_color=col)],
-        [s.Text("                    ", key="msg", background_color=col)],
+        [s.Text("Student Contact Manager", font='courier' '50', background_color=col, justification="left", text_color=col2), s.Button("Log Out", button_color=("green", col), border_width=0)],
+        [s.Text("Enter Register Number", background_color=col, text_color=col2)],
+        [s.Text("                    ", key="msg", background_color=col, text_color=col2)],
         [s.InputText("", key="reg"), s.Button("Search", button_color=("white", "black"), bind_return_key=True)],
         [s.Listbox(student, size=(50, 6), key='box', background_color="white")],
         []
