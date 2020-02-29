@@ -3,10 +3,10 @@ from Log_In import login
 from Sign_Up import signup
 
 col = "#343434"
-
+col2 = "white"
 layout = [
-    [s.Text("Student Contact Manager", background_color=col, justification="left")],
-    [s.Text("", background_color=col)],
+    [s.Text("Student Contact Manager", background_color=col, justification="left", text_color=col2)],
+    [s.Text("", background_color=col, text_color=col2)],
     [s.Button("Log In", button_color=('white', 'black')), s.Button("Sign Up", button_color=('white', 'black'))]
 ]
 w = s.Window("Student Contact Manager", layout, background_color=col, use_default_focus=False, element_justification="center")
