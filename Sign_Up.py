@@ -12,7 +12,9 @@ def signup():
         [s.Text("Enter Password   ", background_color=col), s.InputText("", key="password", password_char='*', size=(20,10))],
         [s.Text("Confirm Password", background_color=col), s.InputText("", key="cpassword", password_char='*',size=(20,10))],
         [s.Text("                                   ", key='msg', background_color=col)],
-        [s.Button("Create Account", bind_return_key=True,   button_color=('white', 'black')), s.Button("Log In", button_color=('white', 'black'))]
+        [s.Button("Create Account", bind_return_key=True,   button_color=('white', 'black'))],
+        [s.Text("Already have an account?", background_color=col),
+         s.Button("Log In", button_color=('green', col), border_width=0)]
     ]
 
     sign_w = s.Window("Sign Up", sign_up_layout, resizable=1, background_color=col)
