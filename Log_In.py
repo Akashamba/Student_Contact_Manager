@@ -5,14 +5,14 @@ from Search import search_page
 
 def login():
     col = "#343434"
-    col2 = "white"
+
     login_layout = [
-        [s.Text("Student Contact Manager", font='courier' '50', background_color=col, justification="left", text_color=col2)],
-        [s.Text("Username", background_color=col, text_color=col2), s.InputText("", key='username',size=(20,10))],
-        [s.Text("Password", background_color=col, text_color=col2), s.InputText("", key="password", password_char='*', size=(20,10))],
+        [s.Text("Student Contact Manager", font='courier' '50', background_color=col, justification="left")],
+        [s.Text("Username", background_color=col, ), s.InputText("", key='username',size=(20,10))],
+        [s.Text("Password", background_color=col), s.InputText("", key="password", password_char='*', size=(20,10))],
         [s.Button("Login", bind_return_key=True, button_color=('white', 'black'))],
         [s.Text("                                                   ", key='msg', background_color=col)],
-        [s.Text("Don't have an account?",background_color=col, text_color=col2),s.Button("Sign Up",button_color=('green',col),border_width=0)]
+        [s.Text("Don't have an account?",background_color=col),s.Button("Sign Up",button_color=('green',col),border_width=0)]
     ]
 
     w = s.Window("Login", login_layout, resizable=1, background_color=col, element_justification="center")

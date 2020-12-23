@@ -3,17 +3,17 @@ from back import *
 import Log_In
 
 col = "#343434"
-col2 = "white"
+
 def signup():
     sign_up_layout = [
-        [s.Text("Student Contact Manager", font='courier' '50', background_color=col, justification="left", text_color=col2)],
-        [s.Text("Enter Name         ", background_color=col, text_color=col2), s.InputText("", key='name', size=(20,10))],
-        [s.Text("Enter Username   ", background_color=col, text_color=col2), s.InputText("", key='username', size=(20,10))],
-        [s.Text("Enter Password   ", background_color=col, text_color=col2), s.InputText("", key="password", password_char='*', size=(20,10))],
-        [s.Text("Confirm Password", background_color=col, text_color=col2), s.InputText("", key="cpassword", password_char='*',size=(20,10))],
+        [s.Text("Student Contact Manager", font='courier' '50', background_color=col, justification="left")],
+        [s.Text("Enter Name         ", background_color=col), s.InputText("", key='name', size=(20,10))],
+        [s.Text("Enter Username   ", background_color=col), s.InputText("", key='username', size=(20,10))],
+        [s.Text("Enter Password   ", background_color=col), s.InputText("", key="password", password_char='*', size=(20,10))],
+        [s.Text("Confirm Password", background_color=col), s.InputText("", key="cpassword", password_char='*',size=(20,10))],
         [s.Text("                                   ", key='msg', background_color=col)],
         [s.Button("Create Account", bind_return_key=True,   button_color=('white', 'black'))],
-        [s.Text("Already have an account?", background_color=col, text_color=col2),
+        [s.Text("Already have an account?", background_color=col),
          s.Button("Log In", button_color=('green', col), border_width=0)]
     ]
 
